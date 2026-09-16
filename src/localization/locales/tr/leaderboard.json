@@ -1,0 +1,13 @@
+{
+  "title": "🏆 Sıralama",
+  "category_select_prompt": "Bir kategori seç:",
+  "category_richest": "💰 En Zengin",
+  "category_level": "⭐ En Yüksek Seviye",
+  "category_reputation": "🏆 En Yüksek İtibar",
+  "category_vehicles": "🚗 En Çok Araç",
+  "category_properties": "🏠 En Çok Mülk",
+  "category_missions": "🎯 En Çok Görev",
+  "category_crew": "👥 En İyi Ekip",
+  "position": "Sıra",
+  "empty": "Bu kategoride henüz veri yok."
+}

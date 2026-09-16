@@ -1,0 +1,13 @@
+{
+  "generic": "Bir hata oluştu. Lütfen tekrar deneyin.",
+  "user_not_found": "Kullanıcı bulunamadı.",
+  "vehicle_not_found": "Araç bulunamadı.",
+  "property_not_found": "Mülk bulunamadı.",
+  "mission_not_found": "Görev bulunamadı.",
+  "crew_not_found": "Ekip bulunamadı.",
+  "not_owner": "Bu menüyü sadece komutu kullanan kişi kullanabilir.",
+  "expired_interaction": "Bu buton artık geçerli değil.",
+  "rate_limited": "Çok hızlı işlem yapıyorsun. Lütfen biraz bekle.",
+  "maintenance_mode": "Bot şu anda bakımda. Lütfen daha sonra tekrar dene.",
+  "duplicate_transaction": "Bu işlem zaten gerçekleştirildi."
+}

@@ -1,0 +1,47 @@
+{
+  "buttons": {
+    "previous": "⬅️ Zurück",
+    "next": "➡️ Weiter",
+    "close": "❌ Schließen",
+    "confirm": "⚠️ Bestätigen",
+    "cancel": "❌ Abbrechen",
+    "back": "🔙 Zurück"
+  },
+  "pagination": {
+    "page_indicator": "Seite {current}/{total}",
+    "expired": "Dieses Menü ist abgelaufen. Bitte führe den Befehl erneut aus."
+  },
+  "onboarding": {
+    "welcome_title": "🎮 Willkommen in der Welt!",
+    "welcome_description": "Wähle eine der folgenden Optionen, um deine Karriere zu beginnen.",
+    "create_profile": "👤 Profil erstellen",
+    "starter_reward": "💰 Startbonus",
+    "first_mission": "🎯 Erste Mission",
+    "how_to_play": "📖 Wie spielt man?",
+    "profile_created": "Dein Profil wurde erstellt! Startguthaben: {amount}"
+  },
+  "language": {
+    "select_prompt": "Bitte wähle eine Sprache:",
+    "changed": "Deine Sprache wurde auf {language} gesetzt.",
+    "tr": "🇹🇷 Türkçe",
+    "en": "🇬🇧 English",
+    "de": "🇩🇪 Deutsch",
+    "es": "🇪🇸 Español"
+  },
+  "help": {
+    "title": "📖 Hilfe-Center",
+    "description": "Verfügbare Befehle und Kategorien sind unten aufgelistet."
+  },
+  "notifications": {
+    "money_earned": "💰 Du hast {amount} verdient!",
+    "vehicle_purchased": "🚗 {vehicle} wurde gekauft!",
+    "mission_completed": "🎯 Mission abgeschlossen: {mission}",
+    "achievement_unlocked": "🏆 Erfolg freigeschaltet: {achievement}",
+    "crew_invite": "👥 Du wurdest in die Crew {crew} eingeladen!"
+  },
+  "generic": {
+    "loading": "⏳ Wird geladen...",
+    "success": "✅ Erfolgreich.",
+    "unknown_error": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
+  }
+}

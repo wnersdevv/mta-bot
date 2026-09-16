@@ -1,0 +1,25 @@
+{
+  "title": "👤 Perfil de {username}",
+  "level": "Nivel",
+  "xp": "XP",
+  "cash": "Efectivo",
+  "bank": "Banco",
+  "reputation": "Reputación",
+  "crew": "Banda",
+  "no_crew": "Sin banda",
+  "rank": "Rango",
+  "achievement_count": "Logros",
+  "buttons": {
+    "economy": "💰 Economía",
+    "garage": "🚗 Garaje",
+    "properties": "🏠 Propiedades",
+    "missions": "🎯 Misiones",
+    "stats": "📊 Estadísticas",
+    "leaderboard": "🏆 Clasificación"
+  },
+  "stats_title": "📊 Estadísticas de {username}",
+  "settings_title": "⚙️ Ajustes",
+  "settings_notifications": "Notificaciones",
+  "settings_notifications_on": "🔔 Activadas",
+  "settings_notifications_off": "🔕 Desactivadas"
+}

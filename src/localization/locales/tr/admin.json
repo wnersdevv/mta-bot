@@ -1,0 +1,13 @@
+{
+  "no_permission": "Bu komutu kullanmak için yetkin yok.",
+  "confirm_action": "Bu işlemi onaylıyor musun?",
+  "action_confirmed": "İşlem onaylandı.",
+  "action_cancelled": "İşlem iptal edildi.",
+  "user_balance_updated": "{user} kullanıcısının bakiyesi güncellendi.",
+  "vehicle_added": "Araç eklendi: {vehicle}",
+  "mission_added": "Görev eklendi: {mission}",
+  "property_added": "Mülk eklendi: {property}",
+  "maintenance_enabled": "Bakım modu etkinleştirildi.",
+  "maintenance_disabled": "Bakım modu devre dışı bırakıldı.",
+  "log_title": "🧾 Sistem Logu"
+}

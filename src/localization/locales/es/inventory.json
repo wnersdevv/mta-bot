@@ -1,0 +1,7 @@
+{
+  "title": "🎒 Inventario de {username}",
+  "empty": "Tu inventario está vacío.",
+  "quantity": "Cantidad",
+  "value": "Valor",
+  "rarity": "Rareza"
+}

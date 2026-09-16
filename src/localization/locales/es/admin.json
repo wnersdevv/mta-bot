@@ -1,0 +1,13 @@
+{
+  "no_permission": "No tienes permiso para usar este comando.",
+  "confirm_action": "¿Estás seguro de que quieres hacer esto?",
+  "action_confirmed": "Acción confirmada.",
+  "action_cancelled": "Acción cancelada.",
+  "user_balance_updated": "Se actualizó el saldo de {user}.",
+  "vehicle_added": "Vehículo añadido: {vehicle}",
+  "mission_added": "Misión añadida: {mission}",
+  "property_added": "Propiedad añadida: {property}",
+  "maintenance_enabled": "Modo de mantenimiento activado.",
+  "maintenance_disabled": "Modo de mantenimiento desactivado.",
+  "log_title": "🧾 Registro del Sistema"
+}

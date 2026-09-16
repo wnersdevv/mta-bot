@@ -1,0 +1,25 @@
+{
+  "title": "👤 {username}'s Profile",
+  "level": "Level",
+  "xp": "XP",
+  "cash": "Cash",
+  "bank": "Bank",
+  "reputation": "Reputation",
+  "crew": "Crew",
+  "no_crew": "No crew",
+  "rank": "Rank",
+  "achievement_count": "Achievements",
+  "buttons": {
+    "economy": "💰 Economy",
+    "garage": "🚗 Garage",
+    "properties": "🏠 Properties",
+    "missions": "🎯 Missions",
+    "stats": "📊 Stats",
+    "leaderboard": "🏆 Leaderboard"
+  },
+  "stats_title": "📊 {username}'s Stats",
+  "settings_title": "⚙️ Settings",
+  "settings_notifications": "Notifications",
+  "settings_notifications_on": "🔔 On",
+  "settings_notifications_off": "🔕 Off"
+}

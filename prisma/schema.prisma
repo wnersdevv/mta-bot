@@ -1,0 +1,379 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+// ─────────────────────────────────────────────────────────
+// CORE
+// ─────────────────────────────────────────────────────────
+// NOT: MongoDB connector BigInt/Decimal desteklemez, bu yüzden tüm para
+// alanları Float (double) olarak tutulur — 2^53'e kadar tam sayı hassasiyeti
+// oyun ekonomisi için yeterlidir. $transaction (EconomyService, satın alma
+// akışları) MongoDB'de çoklu-doküman transaction gerektirir; bu yüzden Mongo
+// bir replica set olarak çalıştırılmalıdır (bkz. README / docker-compose.yml).
+
+model Guild {
+  id        String   @id @map("_id") // discord guild id — ObjectId değil, snowflake string
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  settings GuildSettings?
+  users    User[]
+  crews    Crew[]
+}
+
+model GuildSettings {
+  id                   String   @id @default(auto()) @map("_id") @db.ObjectId
+  guildId              String   @unique
+  guild                Guild    @relation(fields: [guildId], references: [id], onDelete: Cascade)
+  language             String   @default("tr")
+  currencyName         String   @default("$")
+  economyMultiplier    Float    @default(1.0)
+  logChannelId         String?
+  adminRoleId          String?
+  maintenanceMode      Boolean  @default(false)
+  notificationSettings Json     @default("{}")
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+}
+
+model User {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  discordId    String
+  guildId      String
+  guild        Guild    @relation(fields: [guildId], references: [id], onDelete: Cascade)
+  language     String? // per-user override, falls back to guild language
+  cash         Float    @default(0)
+  bank         Float    @default(0)
+  level        Int      @default(1)
+  xp           Int      @default(0)
+  reputation   Int      @default(0)
+  job          String?
+  notifications Boolean @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  transactions   Transaction[]
+  vehicles       UserVehicle[]
+  properties     UserProperty[]
+  missions       UserMission[]
+  inventory      UserInventory[]
+  achievements   UserAchievement[]
+  notificationsLog Notification[]
+  cooldowns      Cooldown[]
+  crewMembership CrewMember?
+
+  @@unique([discordId, guildId])
+  @@index([guildId])
+  @@index([cash])
+  @@index([level])
+  @@index([reputation])
+}
+
+// ─────────────────────────────────────────────────────────
+// ECONOMY
+// ─────────────────────────────────────────────────────────
+
+enum TransactionType {
+  DAILY
+  WORK
+  TRANSFER_IN
+  TRANSFER_OUT
+  DEPOSIT
+  WITHDRAW
+  VEHICLE_PURCHASE
+  VEHICLE_SALE
+  PROPERTY_PURCHASE
+  PROPERTY_SALE
+  MISSION_REWARD
+  MARKET_PURCHASE
+  MARKET_SALE
+  PROPERTY_INCOME
+  ADMIN_ADJUSTMENT
+}
+
+model Transaction {
+  id             String          @id @default(auto()) @map("_id") @db.ObjectId
+  guildId        String
+  userId         String          @db.ObjectId
+  user           User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type           TransactionType
+  amount         Float
+  balanceBefore  Float
+  balanceAfter   Float
+  metadata       Json            @default("{}")
+  createdAt      DateTime        @default(now())
+
+  @@index([userId])
+  @@index([guildId])
+  @@index([type])
+}
+
+// ─────────────────────────────────────────────────────────
+// VEHICLES
+// ─────────────────────────────────────────────────────────
+
+enum VehicleCategory {
+  SPOR
+  SUPER
+  SUV
+  SEDAN
+  MUSCLE
+  OFFROAD
+  MOTOSIKLET
+}
+
+enum Rarity {
+  COMMON
+  UNCOMMON
+  RARE
+  EPIC
+  LEGENDARY
+}
+
+model Vehicle {
+  id          String          @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  brand       String
+  category    VehicleCategory
+  price       Float
+  performance Json // { speed, acceleration, handling }
+  rarity      Rarity          @default(COMMON)
+  image       String?
+  createdAt   DateTime        @default(now())
+
+  ownedBy UserVehicle[]
+
+  @@index([category])
+  @@index([rarity])
+}
+
+model UserVehicle {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId     String   @db.ObjectId
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  vehicleId  String   @db.ObjectId
+  vehicle    Vehicle  @relation(fields: [vehicleId], references: [id], onDelete: Cascade)
+  favorite   Boolean  @default(false)
+  purchasedAt DateTime @default(now())
+  purchasePrice Float
+
+  @@index([userId])
+  @@index([vehicleId])
+}
+
+// ─────────────────────────────────────────────────────────
+// PROPERTIES
+// ─────────────────────────────────────────────────────────
+
+enum PropertyType {
+  DAIRE
+  EV
+  PENTHOUSE
+  GARAJ
+  DEPO
+  OFIS
+  GECE_KULUBU
+  BUNKER
+}
+
+model Property {
+  id                String       @id @default(auto()) @map("_id") @db.ObjectId
+  name              String
+  type              PropertyType
+  price             Float
+  capacity          Int          @default(1)
+  income            Float        @default(0)
+  levelRequirement  Int          @default(1)
+  rarity            Rarity       @default(COMMON)
+  image             String?
+  createdAt         DateTime     @default(now())
+
+  ownedBy UserProperty[]
+}
+
+model UserProperty {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId        String   @db.ObjectId
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  propertyId    String   @db.ObjectId
+  property      Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+  purchasedAt   DateTime @default(now())
+  purchasePrice Float
+  lastIncomeAt  DateTime @default(now())
+
+  @@index([userId])
+  @@index([propertyId])
+}
+
+// ─────────────────────────────────────────────────────────
+// MISSIONS
+// ─────────────────────────────────────────────────────────
+
+enum MissionDifficulty {
+  EASY
+  MEDIUM
+  HARD
+  EXPERT
+}
+
+model Mission {
+  id           String            @id @default(auto()) @map("_id") @db.ObjectId
+  key          String            @unique // stable key used for localization lookup: missions.<key>.title
+  difficulty   MissionDifficulty @default(EASY)
+  reward       Float
+  xp           Int
+  requirements Json              @default("{}")
+  cooldownSec  Int               @default(1800)
+  createdAt    DateTime          @default(now())
+
+  completions UserMission[]
+}
+
+model UserMission {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String   @db.ObjectId
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  missionId   String   @db.ObjectId
+  mission     Mission  @relation(fields: [missionId], references: [id], onDelete: Cascade)
+  completedAt DateTime @default(now())
+  reward      Float
+
+  @@index([userId])
+  @@index([missionId])
+}
+
+// ─────────────────────────────────────────────────────────
+// CREW
+// ─────────────────────────────────────────────────────────
+
+enum CrewRank {
+  KURUCU
+  LIDER
+  YETKILI
+  UYE
+}
+
+model Crew {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  guildId   String
+  guild     Guild    @relation(fields: [guildId], references: [id], onDelete: Cascade)
+  name      String
+  tag       String?
+  createdAt DateTime @default(now())
+
+  members CrewMember[]
+
+  @@unique([guildId, name])
+  @@index([guildId])
+}
+
+model CrewMember {
+  id       String   @id @default(auto()) @map("_id") @db.ObjectId
+  crewId   String   @db.ObjectId
+  crew     Crew     @relation(fields: [crewId], references: [id], onDelete: Cascade)
+  userId   String   @unique @db.ObjectId
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  rank     CrewRank @default(UYE)
+  joinedAt DateTime @default(now())
+
+  @@index([crewId])
+}
+
+// ─────────────────────────────────────────────────────────
+// INVENTORY
+// ─────────────────────────────────────────────────────────
+
+model InventoryItem {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  key         String   @unique
+  rarity      Rarity   @default(COMMON)
+  value       Float    @default(0)
+  createdAt   DateTime @default(now())
+
+  ownedBy UserInventory[]
+}
+
+model UserInventory {
+  id        String        @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String        @db.ObjectId
+  user      User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  itemId    String        @db.ObjectId
+  item      InventoryItem @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  quantity  Int           @default(1)
+  updatedAt DateTime      @updatedAt
+
+  @@unique([userId, itemId])
+  @@index([userId])
+}
+
+// ─────────────────────────────────────────────────────────
+// ACHIEVEMENTS
+// ─────────────────────────────────────────────────────────
+
+model Achievement {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  key       String   @unique // achievements.<key>.title / .description
+  icon      String?
+  createdAt DateTime @default(now())
+
+  unlockedBy UserAchievement[]
+}
+
+model UserAchievement {
+  id            String      @id @default(auto()) @map("_id") @db.ObjectId
+  userId        String      @db.ObjectId
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  achievementId String      @db.ObjectId
+  achievement   Achievement @relation(fields: [achievementId], references: [id], onDelete: Cascade)
+  unlockedAt    DateTime    @default(now())
+
+  @@unique([userId, achievementId])
+  @@index([userId])
+}
+
+// ─────────────────────────────────────────────────────────
+// NOTIFICATIONS
+// ─────────────────────────────────────────────────────────
+
+enum NotificationType {
+  MONEY_EARNED
+  VEHICLE_PURCHASED
+  MISSION_COMPLETED
+  ACHIEVEMENT_UNLOCKED
+  CREW_INVITE
+}
+
+model Notification {
+  id        String            @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String            @db.ObjectId
+  user      User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type      NotificationType
+  payload   Json              @default("{}")
+  read      Boolean           @default(false)
+  createdAt DateTime          @default(now())
+
+  @@index([userId])
+}
+
+// ─────────────────────────────────────────────────────────
+// COOLDOWNS
+// ─────────────────────────────────────────────────────────
+
+model Cooldown {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @db.ObjectId
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  key       String // e.g. "gunluk", "calis", "gorev:<missionId>"
+  expiresAt DateTime
+  streak    Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, key])
+  @@index([expiresAt])
+}

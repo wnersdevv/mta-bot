@@ -1,0 +1,16 @@
+{
+  "unlocked_title": "🏅 Achievement Unlocked!",
+  "unlocked_description": "You earned the achievement: {achievement}!",
+  "ilk_kazanc_title": "🏆 First Earnings",
+  "ilk_kazanc_description": "You earned your first money.",
+  "milyoner_title": "💰 Millionaire",
+  "milyoner_description": "You reached a balance of 1,000,000.",
+  "arac_koleksiyoncusu_title": "🚗 Car Collector",
+  "arac_koleksiyoncusu_description": "You own 10 vehicles.",
+  "mulk_krali_title": "🏠 Property King",
+  "mulk_krali_description": "You own 5 properties.",
+  "gorev_ustasi_title": "🎯 Mission Master",
+  "gorev_ustasi_description": "You completed 50 missions.",
+  "ekip_lideri_title": "👑 Crew Leader",
+  "ekip_lideri_description": "You founded a crew."
+}

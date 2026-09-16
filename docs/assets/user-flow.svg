@@ -1,0 +1,67 @@
+<svg width="1000" height="300" viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="flowbg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3a1c71"/>
+      <stop offset="50%" stop-color="#134e5e"/>
+      <stop offset="100%" stop-color="#0f2027"/>
+    </linearGradient>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6" fill="#f5c518"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="300" rx="16" fill="url(#flowbg)"/>
+  <text x="500" y="36" text-anchor="middle" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#f5c518">🧭 Tipik Yeni Kullanıcı Akışı</text>
+
+  <g font-family="Arial" font-size="13" fill="#ffffff">
+    <!-- step boxes -->
+    <g id="steps">
+      <rect x="20"  y="110" width="130" height="80" rx="14" fill="#1abc9c"/>
+      <rect x="175" y="110" width="130" height="80" rx="14" fill="#57f287"/>
+      <rect x="330" y="110" width="130" height="80" rx="14" fill="#f5c518"/>
+      <rect x="485" y="110" width="130" height="80" rx="14" fill="#5dade2"/>
+      <rect x="640" y="110" width="130" height="80" rx="14" fill="#e8618c"/>
+      <rect x="795" y="110" width="185" height="80" rx="14" fill="#a35de8"/>
+    </g>
+
+    <text x="85"  y="145" text-anchor="middle" font-weight="900" font-size="20" fill="#0f2027">1</text>
+    <text x="85"  y="168" text-anchor="middle" fill="#0f2027" font-weight="700">/baslat</text>
+
+    <text x="240" y="145" text-anchor="middle" font-weight="900" font-size="20" fill="#0f2027">2</text>
+    <text x="240" y="168" text-anchor="middle" fill="#0f2027" font-weight="700">/profil</text>
+
+    <text x="395" y="145" text-anchor="middle" font-weight="900" font-size="20" fill="#0f2027">3</text>
+    <text x="395" y="168" text-anchor="middle" fill="#0f2027" font-weight="700">/gunluk + /calis</text>
+
+    <text x="550" y="145" text-anchor="middle" font-weight="900" font-size="20" fill="#0f2027">4</text>
+    <text x="550" y="168" text-anchor="middle" fill="#0f2027" font-weight="700">/gorevler</text>
+
+    <text x="705" y="145" text-anchor="middle" font-weight="900" font-size="20" fill="#ffffff">5</text>
+    <text x="705" y="168" text-anchor="middle" fill="#ffffff" font-weight="700">/market → /garaj</text>
+
+    <text x="887" y="145" text-anchor="middle" font-weight="900" font-size="20" fill="#ffffff">6</text>
+    <text x="887" y="168" text-anchor="middle" fill="#ffffff" font-weight="700">/ekip + /siralama</text>
+  </g>
+
+  <!-- arrows between boxes -->
+  <g stroke="#f5c518" stroke-width="3" fill="none" marker-end="url(#arrow2)">
+    <path d="M150,150 L173,150"/>
+    <path d="M305,150 L328,150"/>
+    <path d="M460,150 L483,150"/>
+    <path d="M615,150 L638,150"/>
+    <path d="M770,150 L793,150"/>
+  </g>
+
+  <g font-family="Arial" font-size="12" fill="#c9d6df">
+    <text x="85"  y="215" text-anchor="middle">Başlangıç parası</text>
+    <text x="240" y="215" text-anchor="middle">Canvas kartını gör</text>
+    <text x="395" y="215" text-anchor="middle">Streak + iş kazancı</text>
+    <text x="550" y="215" text-anchor="middle">XP + ödül topla</text>
+    <text x="705" y="215" text-anchor="middle">Araç al, garajda sakla</text>
+    <text x="887" y="215" text-anchor="middle">Sosyalleş, rekabet et</text>
+  </g>
+
+  <text x="500" y="265" text-anchor="middle" font-family="Arial" font-size="12" fill="#9fb3c8">
+    Her adım kendi Canvas kartını / embed'ini üretir — hepsi kullanıcının seçtiği dilde (bkz. /dil)
+  </text>
+</svg>

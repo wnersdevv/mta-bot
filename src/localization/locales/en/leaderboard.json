@@ -1,0 +1,13 @@
+{
+  "title": "🏆 Leaderboard",
+  "category_select_prompt": "Select a category:",
+  "category_richest": "💰 Richest",
+  "category_level": "⭐ Highest Level",
+  "category_reputation": "🏆 Highest Reputation",
+  "category_vehicles": "🚗 Most Vehicles",
+  "category_properties": "🏠 Most Properties",
+  "category_missions": "🎯 Most Missions",
+  "category_crew": "👥 Best Crew",
+  "position": "Rank",
+  "empty": "No data yet for this category."
+}

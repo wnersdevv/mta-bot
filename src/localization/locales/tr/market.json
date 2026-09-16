@@ -1,0 +1,14 @@
+{
+  "title": "🛒 Market",
+  "category_select_prompt": "Bir kategori seç:",
+  "category_vehicles": "🚗 Araçlar",
+  "category_properties": "🏠 Mülkler",
+  "category_items": "🎒 Eşyalar",
+  "category_cosmetics": "✨ Kozmetik",
+  "category_boosts": "⚡ Bonuslar",
+  "buy_button": "Satın Al",
+  "buy_success": "{item} satın alındı!",
+  "buy_insufficient_funds": "Bu ürünü satın almak için yeterli bakiyen yok.",
+  "sell_button": "Sat",
+  "sell_success": "{item} satıldı, {amount} kazandın."
+}

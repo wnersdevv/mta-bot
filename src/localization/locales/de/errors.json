@@ -1,0 +1,13 @@
+{
+  "generic": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+  "user_not_found": "Benutzer nicht gefunden.",
+  "vehicle_not_found": "Fahrzeug nicht gefunden.",
+  "property_not_found": "Immobilie nicht gefunden.",
+  "mission_not_found": "Mission nicht gefunden.",
+  "crew_not_found": "Crew nicht gefunden.",
+  "not_owner": "Nur die Person, die diesen Befehl ausgeführt hat, kann dieses Menü benutzen.",
+  "expired_interaction": "Dieser Button ist nicht mehr gültig.",
+  "rate_limited": "Du machst das zu schnell. Bitte warte etwas.",
+  "maintenance_mode": "Der Bot befindet sich derzeit in Wartung. Bitte versuche es später erneut.",
+  "duplicate_transaction": "Diese Transaktion wurde bereits verarbeitet."
+}

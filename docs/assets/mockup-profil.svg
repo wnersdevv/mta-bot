@@ -1,0 +1,60 @@
+<svg width="820" height="420" viewBox="0 0 820 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="discordbg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#313338"/>
+      <stop offset="100%" stop-color="#2b2d31"/>
+    </linearGradient>
+    <linearGradient id="cardbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2027"/>
+      <stop offset="50%" stop-color="#203a43"/>
+      <stop offset="100%" stop-color="#2c5364"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="820" height="420" rx="12" fill="url(#discordbg)"/>
+
+  <!-- fake discord message row -->
+  <circle cx="45" cy="40" r="18" fill="#5865f2"/>
+  <text x="45" y="46" text-anchor="middle" font-family="Arial" font-size="16" fill="#fff">W</text>
+  <text x="75" y="36" font-family="Arial" font-weight="700" font-size="15" fill="#f2f3f5">WnersDev Bot</text>
+  <text x="205" y="36" font-family="Arial" font-size="12" fill="#949ba4">bugün 21:14</text>
+  <text x="75" y="56" font-family="Arial" font-size="13" fill="#dbdee1">/profil komutunu çalıştırdı</text>
+
+  <!-- the profile card mockup itself -->
+  <g transform="translate(45,75)">
+    <rect width="720" height="256" rx="18" fill="url(#cardbg)"/>
+    <rect x="0" y="0" width="8" height="256" rx="4" fill="#1abc9c"/>
+
+    <circle cx="128" cy="128" r="80" fill="#1abc9c"/>
+    <circle cx="128" cy="128" r="80" fill="none" stroke="#f5c518" stroke-width="5"/>
+    <text x="128" y="140" text-anchor="middle" font-family="Arial" font-size="46" fill="#0f2027" font-weight="700">W</text>
+
+    <text x="225" y="95" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#ffffff">wnersdev</text>
+    <text x="225" y="130" font-family="Arial" font-weight="700" font-size="22" fill="#f5c518">Seviye 27</text>
+
+    <rect x="225" y="148" width="460" height="18" rx="9" fill="#132531"/>
+    <rect x="225" y="148" width="340" height="18" rx="9" fill="#1abc9c"/>
+    <text x="225" y="185" font-family="Arial" font-size="14" fill="#ffffff">8,450 / 13,500 XP</text>
+
+    <text x="225" y="222" font-family="Arial" font-weight="700" font-size="19" fill="#57f287">💰 $1,284,600</text>
+    <text x="425" y="222" font-family="Arial" font-weight="700" font-size="19" fill="#5dade2">🏦 $340,000</text>
+    <text x="605" y="222" font-family="Arial" font-weight="700" font-size="19" fill="#f5c518">⭐ 62</text>
+    <text x="225" y="248" font-family="Arial" font-size="15" fill="#e5e7eb">👥 Gece Kartalları   🏅 9</text>
+  </g>
+
+  <!-- fake buttons row -->
+  <g font-family="Arial" font-size="13" fill="#dbdee1">
+    <rect x="45" y="345" width="110" height="34" rx="8" fill="#3a3d42"/>
+    <text x="100" y="366" text-anchor="middle">💰 Ekonomi</text>
+    <rect x="165" y="345" width="100" height="34" rx="8" fill="#3a3d42"/>
+    <text x="215" y="366" text-anchor="middle">🚗 Garaj</text>
+    <rect x="275" y="345" width="110" height="34" rx="8" fill="#3a3d42"/>
+    <text x="330" y="366" text-anchor="middle">🏠 Mülkler</text>
+    <rect x="395" y="345" width="115" height="34" rx="8" fill="#3a3d42"/>
+    <text x="452" y="366" text-anchor="middle">🎯 Görevler</text>
+  </g>
+
+  <text x="45" y="405" font-family="Arial" font-size="11" fill="#6b7280">
+    * illüstratif mockup — gerçek Discord ekran görüntüsü değildir
+  </text>
+</svg>

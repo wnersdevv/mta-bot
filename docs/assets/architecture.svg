@@ -1,0 +1,88 @@
+<svg width="1000" height="620" viewBox="0 0 1000 620" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="archbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2027"/>
+      <stop offset="100%" stop-color="#1c2b33"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6" fill="#5dade2"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="620" rx="16" fill="url(#archbg)"/>
+  <text x="500" y="38" text-anchor="middle" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#f5c518">🏗️ WnersDev — Sistem Mimarisi</text>
+
+  <!-- Discord -->
+  <rect x="40" y="70" width="200" height="70" rx="12" fill="#5865f2"/>
+  <text x="140" y="100" text-anchor="middle" font-family="Arial" font-weight="700" font-size="16" fill="#fff">Discord Gateway</text>
+  <text x="140" y="122" text-anchor="middle" font-family="Arial" font-size="12" fill="#e5e7eb">Slash komut / buton / select / modal</text>
+
+  <!-- wnersdev.ts -->
+  <rect x="40" y="180" width="200" height="70" rx="12" fill="#1abc9c"/>
+  <text x="140" y="210" text-anchor="middle" font-family="Arial" font-weight="700" font-size="16" fill="#0f2027">wnersdev.ts</text>
+  <text x="140" y="232" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f2027">Client + event kayıtları</text>
+
+  <!-- interactionCreate pipeline -->
+  <rect x="300" y="180" width="260" height="130" rx="12" fill="#132531" stroke="#1abc9c" stroke-width="2"/>
+  <text x="430" y="205" text-anchor="middle" font-family="Arial" font-weight="700" font-size="15" fill="#f5c518">interactionCreate.ts</text>
+  <text x="320" y="228" font-family="Arial" font-size="12" fill="#e5e7eb">① Rate limit kontrolü</text>
+  <text x="320" y="248" font-family="Arial" font-size="12" fill="#e5e7eb">② Component TTL (5 dk) kontrolü</text>
+  <text x="320" y="268" font-family="Arial" font-size="12" fill="#e5e7eb">③ Bakım modu kontrolü</text>
+  <text x="320" y="288" font-family="Arial" font-size="12" fill="#e5e7eb">④ Handler'a dispatch</text>
+
+  <!-- loaders -->
+  <rect x="600" y="180" width="200" height="70" rx="12" fill="#3a3d42"/>
+  <text x="700" y="210" text-anchor="middle" font-family="Arial" font-weight="700" font-size="14" fill="#fff">componentLoader.ts</text>
+  <text x="700" y="232" text-anchor="middle" font-family="Arial" font-size="11" fill="#dbdee1">Komut/buton/select/modal keşfi</text>
+
+  <!-- commands/components -->
+  <rect x="600" y="280" width="200" height="90" rx="12" fill="#4b1248"/>
+  <text x="700" y="305" text-anchor="middle" font-family="Arial" font-weight="700" font-size="14" fill="#fff">commands/ + components/</text>
+  <text x="700" y="326" text-anchor="middle" font-family="Arial" font-size="11" fill="#f0c419">24 komut · butonlar</text>
+  <text x="700" y="344" text-anchor="middle" font-family="Arial" font-size="11" fill="#f0c419">select menüler · modaller</text>
+
+  <!-- services -->
+  <rect x="300" y="360" width="260" height="110" rx="12" fill="#134e5e"/>
+  <text x="430" y="385" text-anchor="middle" font-family="Arial" font-weight="700" font-size="15" fill="#f5c518">services/</text>
+  <text x="320" y="408" font-family="Arial" font-size="11" fill="#e5e7eb">Economy · Achievement · Cooldown</text>
+  <text x="320" y="426" font-family="Arial" font-size="11" fill="#e5e7eb">Language · PropertyIncome</text>
+  <text x="320" y="444" font-family="Arial" font-size="11" fill="#e5e7eb">DiscordLog</text>
+
+  <!-- canvas + i18n side -->
+  <rect x="600" y="400" width="200" height="70" rx="12" fill="#71b280"/>
+  <text x="700" y="428" text-anchor="middle" font-family="Arial" font-weight="700" font-size="13" fill="#0f2027">canvas/ + localization/</text>
+  <text x="700" y="448" text-anchor="middle" font-family="Arial" font-size="11" fill="#0f2027">Kartlar · tr/en/de/es çeviri</text>
+
+  <!-- prisma -->
+  <rect x="300" y="500" width="260" height="70" rx="12" fill="#2d3748"/>
+  <text x="430" y="528" text-anchor="middle" font-family="Arial" font-weight="700" font-size="15" fill="#fff">Prisma Client</text>
+  <text x="430" y="548" text-anchor="middle" font-family="Arial" font-size="11" fill="#a0aec0">$transaction · repository katmanı</text>
+
+  <!-- mongodb -->
+  <rect x="40" y="500" width="200" height="70" rx="12" fill="#47A248"/>
+  <text x="140" y="528" text-anchor="middle" font-family="Arial" font-weight="700" font-size="15" fill="#fff">MongoDB</text>
+  <text x="140" y="548" text-anchor="middle" font-family="Arial" font-size="11" fill="#e6ffe6">Replica Set (rs0)</text>
+
+  <!-- discord log channel -->
+  <rect x="600" y="500" width="200" height="70" rx="12" fill="#5865f2"/>
+  <text x="700" y="528" text-anchor="middle" font-family="Arial" font-weight="700" font-size="14" fill="#fff">Log Kanalı</text>
+  <text x="700" y="548" text-anchor="middle" font-family="Arial" font-size="11" fill="#e5e7eb">Admin/güvenlik olayları (opsiyonel)</text>
+
+  <!-- arrows -->
+  <g stroke="#5dade2" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M140,140 L140,178"/>
+    <path d="M240,215 L298,215"/>
+    <path d="M560,215 L598,215"/>
+    <path d="M700,250 L700,278"/>
+    <path d="M600,240 L432,178" />
+    <path d="M430,310 L430,358"/>
+    <path d="M560,410 L598,420"/>
+    <path d="M430,470 L430,498"/>
+    <path d="M300,535 L242,535"/>
+    <path d="M560,435 L598,470"/>
+  </g>
+
+  <text x="500" y="600" text-anchor="middle" font-family="Arial" font-size="12" fill="#6b7280">
+    Kullanıcı bir komut/buton tıklar → pipeline kontrolleri → handler çalışır → servisler MongoDB'ye atomik yazar → sonuç Canvas/embed olarak geri döner
+  </text>
+</svg>

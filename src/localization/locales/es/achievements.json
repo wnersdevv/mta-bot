@@ -1,0 +1,16 @@
+{
+  "unlocked_title": "🏅 ¡Logro Desbloqueado!",
+  "unlocked_description": "¡Obtuviste el logro {achievement}!",
+  "ilk_kazanc_title": "🏆 Primera Ganancia",
+  "ilk_kazanc_description": "Ganaste tu primer dinero.",
+  "milyoner_title": "💰 Millonario",
+  "milyoner_description": "Alcanzaste un saldo de 1.000.000.",
+  "arac_koleksiyoncusu_title": "🚗 Coleccionista de Autos",
+  "arac_koleksiyoncusu_description": "Posees 10 vehículos.",
+  "mulk_krali_title": "🏠 Rey de Propiedades",
+  "mulk_krali_description": "Posees 5 propiedades.",
+  "gorev_ustasi_title": "🎯 Maestro de Misiones",
+  "gorev_ustasi_description": "Completaste 50 misiones.",
+  "ekip_lideri_title": "👑 Líder de Banda",
+  "ekip_lideri_description": "Fundaste una banda."
+}

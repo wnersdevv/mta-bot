@@ -1,0 +1,25 @@
+{
+  "title": "👤 {username} Profili",
+  "level": "Seviye",
+  "xp": "XP",
+  "cash": "Nakit",
+  "bank": "Banka",
+  "reputation": "İtibar",
+  "crew": "Ekip",
+  "no_crew": "Ekip yok",
+  "rank": "Rütbe",
+  "achievement_count": "Başarı Sayısı",
+  "buttons": {
+    "economy": "💰 Ekonomi",
+    "garage": "🚗 Garaj",
+    "properties": "🏠 Mülkler",
+    "missions": "🎯 Görevler",
+    "stats": "📊 İstatistik",
+    "leaderboard": "🏆 Sıralama"
+  },
+  "stats_title": "📊 {username} İstatistikleri",
+  "settings_title": "⚙️ Ayarlar",
+  "settings_notifications": "Bildirimler",
+  "settings_notifications_on": "🔔 Açık",
+  "settings_notifications_off": "🔕 Kapalı"
+}

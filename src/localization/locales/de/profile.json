@@ -1,0 +1,25 @@
+{
+  "title": "👤 Profil von {username}",
+  "level": "Level",
+  "xp": "XP",
+  "cash": "Bargeld",
+  "bank": "Bank",
+  "reputation": "Ruf",
+  "crew": "Crew",
+  "no_crew": "Keine Crew",
+  "rank": "Rang",
+  "achievement_count": "Erfolge",
+  "buttons": {
+    "economy": "💰 Wirtschaft",
+    "garage": "🚗 Garage",
+    "properties": "🏠 Immobilien",
+    "missions": "🎯 Missionen",
+    "stats": "📊 Statistik",
+    "leaderboard": "🏆 Rangliste"
+  },
+  "stats_title": "📊 Statistik von {username}",
+  "settings_title": "⚙️ Einstellungen",
+  "settings_notifications": "Benachrichtigungen",
+  "settings_notifications_on": "🔔 Ein",
+  "settings_notifications_off": "🔕 Aus"
+}

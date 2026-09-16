@@ -1,0 +1,13 @@
+{
+  "generic": "Algo salió mal. Por favor, inténtalo de nuevo.",
+  "user_not_found": "Usuario no encontrado.",
+  "vehicle_not_found": "Vehículo no encontrado.",
+  "property_not_found": "Propiedad no encontrada.",
+  "mission_not_found": "Misión no encontrada.",
+  "crew_not_found": "Banda no encontrada.",
+  "not_owner": "Solo la persona que ejecutó este comando puede usar este menú.",
+  "expired_interaction": "Este botón ya no es válido.",
+  "rate_limited": "Estás haciendo esto demasiado rápido. Por favor, espera un poco.",
+  "maintenance_mode": "El bot está actualmente en mantenimiento. Inténtalo de nuevo más tarde.",
+  "duplicate_transaction": "Esta transacción ya ha sido procesada."
+}

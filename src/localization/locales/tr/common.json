@@ -1,0 +1,47 @@
+{
+  "buttons": {
+    "previous": "⬅️ Önceki",
+    "next": "➡️ Sonraki",
+    "close": "❌ Kapat",
+    "confirm": "⚠️ Onayla",
+    "cancel": "❌ İptal",
+    "back": "🔙 Geri"
+  },
+  "pagination": {
+    "page_indicator": "Sayfa {current}/{total}",
+    "expired": "Bu menünün süresi doldu. Komutu tekrar çalıştır."
+  },
+  "onboarding": {
+    "welcome_title": "🎮 Dünyaya Hoş Geldin!",
+    "welcome_description": "Kariyerine başlamak için aşağıdaki seçeneklerden birini seç.",
+    "create_profile": "👤 Profil Oluştur",
+    "starter_reward": "💰 Başlangıç Ödülü",
+    "first_mission": "🎯 İlk Görev",
+    "how_to_play": "📖 Nasıl Oynanır?",
+    "profile_created": "Profilin oluşturuldu! Başlangıç bakiyen: {amount}"
+  },
+  "language": {
+    "select_prompt": "Lütfen bir dil seç:",
+    "changed": "Dilin başarıyla {language} olarak ayarlandı.",
+    "tr": "🇹🇷 Türkçe",
+    "en": "🇬🇧 English",
+    "de": "🇩🇪 Deutsch",
+    "es": "🇪🇸 Español"
+  },
+  "help": {
+    "title": "📖 Yardım Merkezi",
+    "description": "Kullanılabilir komutlar ve kategoriler aşağıdadır."
+  },
+  "notifications": {
+    "money_earned": "💰 {amount} kazandın!",
+    "vehicle_purchased": "🚗 {vehicle} satın alındı!",
+    "mission_completed": "🎯 Görev tamamlandı: {mission}",
+    "achievement_unlocked": "🏆 Başarı açıldı: {achievement}",
+    "crew_invite": "👥 {crew} ekibine davet edildin!"
+  },
+  "generic": {
+    "loading": "⏳ Yükleniyor...",
+    "success": "✅ İşlem başarılı.",
+    "unknown_error": "Bir hata oluştu. Lütfen tekrar deneyin."
+  }
+}

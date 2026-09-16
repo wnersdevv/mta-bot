@@ -1,0 +1,13 @@
+{
+  "title": "🏆 Rangliste",
+  "category_select_prompt": "Wähle eine Kategorie:",
+  "category_richest": "💰 Reichste",
+  "category_level": "⭐ Höchstes Level",
+  "category_reputation": "🏆 Höchster Ruf",
+  "category_vehicles": "🚗 Meiste Fahrzeuge",
+  "category_properties": "🏠 Meiste Immobilien",
+  "category_missions": "🎯 Meiste Missionen",
+  "category_crew": "👥 Beste Crew",
+  "position": "Rang",
+  "empty": "Für diese Kategorie liegen noch keine Daten vor."
+}

@@ -1,0 +1,13 @@
+{
+  "no_permission": "Du hast keine Berechtigung, diesen Befehl zu benutzen.",
+  "confirm_action": "Bist du sicher, dass du das tun möchtest?",
+  "action_confirmed": "Aktion bestätigt.",
+  "action_cancelled": "Aktion abgebrochen.",
+  "user_balance_updated": "Der Kontostand von {user} wurde aktualisiert.",
+  "vehicle_added": "Fahrzeug hinzugefügt: {vehicle}",
+  "mission_added": "Mission hinzugefügt: {mission}",
+  "property_added": "Immobilie hinzugefügt: {property}",
+  "maintenance_enabled": "Wartungsmodus aktiviert.",
+  "maintenance_disabled": "Wartungsmodus deaktiviert.",
+  "log_title": "🧾 Systemprotokoll"
+}

@@ -1,0 +1,47 @@
+{
+  "buttons": {
+    "previous": "⬅️ Anterior",
+    "next": "➡️ Siguiente",
+    "close": "❌ Cerrar",
+    "confirm": "⚠️ Confirmar",
+    "cancel": "❌ Cancelar",
+    "back": "🔙 Volver"
+  },
+  "pagination": {
+    "page_indicator": "Página {current}/{total}",
+    "expired": "Este menú ha caducado. Vuelve a ejecutar el comando."
+  },
+  "onboarding": {
+    "welcome_title": "🎮 ¡Bienvenido al mundo!",
+    "welcome_description": "Elige una de las siguientes opciones para comenzar tu carrera.",
+    "create_profile": "👤 Crear Perfil",
+    "starter_reward": "💰 Recompensa Inicial",
+    "first_mission": "🎯 Primera Misión",
+    "how_to_play": "📖 ¿Cómo jugar?",
+    "profile_created": "¡Tu perfil ha sido creado! Saldo inicial: {amount}"
+  },
+  "language": {
+    "select_prompt": "Selecciona un idioma:",
+    "changed": "Tu idioma se ha configurado como {language}.",
+    "tr": "🇹🇷 Türkçe",
+    "en": "🇬🇧 English",
+    "de": "🇩🇪 Deutsch",
+    "es": "🇪🇸 Español"
+  },
+  "help": {
+    "title": "📖 Centro de Ayuda",
+    "description": "Los comandos y categorías disponibles se listan a continuación."
+  },
+  "notifications": {
+    "money_earned": "💰 ¡Has ganado {amount}!",
+    "vehicle_purchased": "🚗 ¡{vehicle} ha sido comprado!",
+    "mission_completed": "🎯 Misión completada: {mission}",
+    "achievement_unlocked": "🏆 Logro desbloqueado: {achievement}",
+    "crew_invite": "👥 ¡Has sido invitado a la banda {crew}!"
+  },
+  "generic": {
+    "loading": "⏳ Cargando...",
+    "success": "✅ Operación exitosa.",
+    "unknown_error": "Algo salió mal. Por favor, inténtalo de nuevo."
+  }
+}

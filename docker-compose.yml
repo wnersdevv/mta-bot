@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+  # Prisma'nın $transaction (EconomyService, satın alma akışları) kullanabilmesi için
+  # MongoDB'nin bir replica set olarak çalışması ZORUNLUDUR — tek node bile olsa.
+  # Healthcheck burada hem "hazır mı" kontrolü yapıyor hem de replica set hiç
+  # başlatılmamışsa (ilk çalıştırma) kendisini otomatik olarak initiate ediyor.
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    command: ["--replSet", "rs0", "--bind_ip_all"]
+    ports:
+      - "27017:27017"
+    volumes:
+      - gta_bot_mongo_data:/data/db
+    healthcheck:
+      test: >
+        echo "try { rs.status().ok } catch (err) { rs.initiate({_id:'rs0',members:[{_id:0,host:'mongo:27017'}]}) }"
+        | mongosh --quiet
+      interval: 5s
+      timeout: 10s
+      retries: 20
+
+  bot:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      mongo:
+        condition: service_healthy
+    volumes:
+      # Gerçek sırlar burada, imajın dışında, salt-okunur olarak bağlanır.
+      # config/ayarlar.example.json'u config/ayarlar.json olarak kopyalayıp
+      # databaseUrl'i şuna benzer bir şekilde ayarlamayı unutmayın:
+      # "mongodb://mongo:27017/gta_bot?replicaSet=rs0&minPoolSize=10&maxPoolSize=100"
+      - ./config/ayarlar.json:/app/config/ayarlar.json:ro
+    command: sh -c "node scripts/run-with-config.js npx prisma db push --accept-data-loss && node dist/wnersdev.js"
+
+volumes:
+  gta_bot_mongo_data:

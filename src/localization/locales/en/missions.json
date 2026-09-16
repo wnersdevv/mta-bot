@@ -1,0 +1,23 @@
+{
+  "list_title": "🎯 Missions",
+  "select_prompt": "Select a mission:",
+  "detail_title": "🎯 {title}",
+  "difficulty": "Difficulty",
+  "reward": "Reward",
+  "xp": "XP",
+  "requirements": "Requirements",
+  "cooldown": "Cooldown",
+  "difficulty_easy": "Easy",
+  "difficulty_medium": "Medium",
+  "difficulty_hard": "Hard",
+  "difficulty_expert": "Expert",
+  "complete_button": "Start Mission",
+  "completed_title": "🎯 Mission Complete!",
+  "completed_description": "You completed {title} and earned {amount}! (+{xp} XP)",
+  "on_cooldown": "You need to wait before doing this mission again. Time remaining: {remaining}",
+  "requirements_not_met": "You don't meet the requirements for this mission.",
+  "gece_teslimati_title": "🌙 Night Delivery",
+  "hizli_kurye_title": "⚡ Fast Courier",
+  "vip_tasima_title": "🎩 VIP Transport",
+  "ozel_arac_gorevi_title": "🚗 Special Vehicle Mission"
+}

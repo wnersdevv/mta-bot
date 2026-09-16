@@ -1,0 +1,14 @@
+{
+  "title": "🛒 Mercado",
+  "category_select_prompt": "Selecciona una categoría:",
+  "category_vehicles": "🚗 Vehículos",
+  "category_properties": "🏠 Propiedades",
+  "category_items": "🎒 Objetos",
+  "category_cosmetics": "✨ Cosméticos",
+  "category_boosts": "⚡ Bonificaciones",
+  "buy_button": "Comprar",
+  "buy_success": "¡{item} comprado!",
+  "buy_insufficient_funds": "No tienes suficiente saldo para comprar esto.",
+  "sell_button": "Vender",
+  "sell_success": "{item} vendido, ganaste {amount}."
+}

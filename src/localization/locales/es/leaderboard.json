@@ -1,0 +1,13 @@
+{
+  "title": "🏆 Clasificación",
+  "category_select_prompt": "Selecciona una categoría:",
+  "category_richest": "💰 Más Ricos",
+  "category_level": "⭐ Nivel Más Alto",
+  "category_reputation": "🏆 Mayor Reputación",
+  "category_vehicles": "🚗 Más Vehículos",
+  "category_properties": "🏠 Más Propiedades",
+  "category_missions": "🎯 Más Misiones",
+  "category_crew": "👥 Mejor Banda",
+  "position": "Posición",
+  "empty": "Aún no hay datos para esta categoría."
+}

@@ -1,0 +1,6 @@
+node_modules/
+dist/
+config/ayarlar.json
+config/.komutlar-kayitli
+*.log
+.DS_Store

@@ -1,0 +1,10 @@
+{
+  "discordToken": "",
+  "clientId": "",
+  "devGuildId": "",
+  "databaseUrl": "mongodb://localhost:27017/gta_bot?replicaSet=rs0&minPoolSize=10&maxPoolSize=100",
+  "logChannelId": "",
+  "adminRoleId": "",
+  "defaultLanguage": "tr",
+  "nodeEnv": "development"
+}

@@ -1,0 +1,55 @@
+<svg width="820" height="440" viewBox="0 0 820 440" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="discordbg2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#313338"/>
+      <stop offset="100%" stop-color="#2b2d31"/>
+    </linearGradient>
+    <linearGradient id="lbbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2027"/>
+      <stop offset="100%" stop-color="#203a43"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="820" height="440" rx="12" fill="url(#discordbg2)"/>
+
+  <circle cx="45" cy="40" r="18" fill="#5865f2"/>
+  <text x="45" y="46" text-anchor="middle" font-family="Arial" font-size="16" fill="#fff">W</text>
+  <text x="75" y="36" font-family="Arial" font-weight="700" font-size="15" fill="#f2f3f5">WnersDev Bot</text>
+  <text x="75" y="56" font-family="Arial" font-size="13" fill="#dbdee1">/siralama → 💰 En Zengin</text>
+
+  <g transform="translate(45,75)">
+    <rect width="720" height="330" rx="14" fill="url(#lbbg)"/>
+    <text x="24" y="46" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#f5c518">💰 En Zengin</text>
+
+    <g font-family="Arial" font-size="20" fill="#ffffff">
+      <rect x="0" y="70" width="720" height="42" fill="#132531"/>
+      <text x="24" y="97">🥇</text>
+      <text x="90" y="97">RockstarKral</text>
+      <text x="696" y="97" text-anchor="end" fill="#1abc9c" font-weight="700">$4,820,000</text>
+
+      <rect x="0" y="112" width="720" height="42" fill="#0f2027"/>
+      <text x="24" y="139">🥈</text>
+      <text x="90" y="139">LosSantosBaron</text>
+      <text x="696" y="139" text-anchor="end" fill="#1abc9c" font-weight="700">$3,910,500</text>
+
+      <rect x="0" y="154" width="720" height="42" fill="#132531"/>
+      <text x="24" y="181">🥉</text>
+      <text x="90" y="181">wnersdev</text>
+      <text x="696" y="181" text-anchor="end" fill="#1abc9c" font-weight="700">$1,284,600</text>
+
+      <rect x="0" y="196" width="720" height="42" fill="#0f2027"/>
+      <text x="24" y="223">#4</text>
+      <text x="90" y="223">GeceKartali07</text>
+      <text x="696" y="223" text-anchor="end" fill="#1abc9c" font-weight="700">$980,200</text>
+
+      <rect x="0" y="238" width="720" height="42" fill="#132531"/>
+      <text x="24" y="265">#5</text>
+      <text x="90" y="265">VinewoodStar</text>
+      <text x="696" y="265" text-anchor="end" fill="#1abc9c" font-weight="700">$744,000</text>
+    </g>
+  </g>
+
+  <text x="45" y="425" font-family="Arial" font-size="11" fill="#6b7280">
+    * illüstratif mockup — gerçek Discord ekran görüntüsü değildir
+  </text>
+</svg>

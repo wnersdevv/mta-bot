@@ -1,0 +1,23 @@
+{
+  "list_title": "🎯 Misiones",
+  "select_prompt": "Selecciona una misión:",
+  "detail_title": "🎯 {title}",
+  "difficulty": "Dificultad",
+  "reward": "Recompensa",
+  "xp": "XP",
+  "requirements": "Requisitos",
+  "cooldown": "Tiempo de espera",
+  "difficulty_easy": "Fácil",
+  "difficulty_medium": "Media",
+  "difficulty_hard": "Difícil",
+  "difficulty_expert": "Experto",
+  "complete_button": "Iniciar Misión",
+  "completed_title": "🎯 ¡Misión Completada!",
+  "completed_description": "¡Completaste {title} y ganaste {amount}! (+{xp} XP)",
+  "on_cooldown": "Debes esperar antes de volver a hacer esta misión. Tiempo restante: {remaining}",
+  "requirements_not_met": "No cumples los requisitos para esta misión.",
+  "gece_teslimati_title": "🌙 Entrega Nocturna",
+  "hizli_kurye_title": "⚡ Mensajero Rápido",
+  "vip_tasima_title": "🎩 Transporte VIP",
+  "ozel_arac_gorevi_title": "🚗 Misión de Vehículo Especial"
+}

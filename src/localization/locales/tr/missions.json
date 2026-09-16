@@ -1,0 +1,23 @@
+{
+  "list_title": "🎯 Görevler",
+  "select_prompt": "Bir görev seç:",
+  "detail_title": "🎯 {title}",
+  "difficulty": "Zorluk",
+  "reward": "Ödül",
+  "xp": "XP",
+  "requirements": "Gereksinimler",
+  "cooldown": "Bekleme Süresi",
+  "difficulty_easy": "Kolay",
+  "difficulty_medium": "Orta",
+  "difficulty_hard": "Zor",
+  "difficulty_expert": "Uzman",
+  "complete_button": "Göreve Başla",
+  "completed_title": "🎯 Görev Tamamlandı!",
+  "completed_description": "{title} görevini tamamladın ve {amount} kazandın! (+{xp} XP)",
+  "on_cooldown": "Bu görev için beklemen gerekiyor. Kalan süre: {remaining}",
+  "requirements_not_met": "Bu görevi yapmak için gereksinimleri karşılamıyorsun.",
+  "gece_teslimati_title": "🌙 Gece Teslimatı",
+  "hizli_kurye_title": "⚡ Hızlı Kurye",
+  "vip_tasima_title": "🎩 VIP Taşıma",
+  "ozel_arac_gorevi_title": "🚗 Özel Araç Görevi"
+}
